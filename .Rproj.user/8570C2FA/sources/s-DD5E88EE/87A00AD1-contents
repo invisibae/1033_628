@@ -1,0 +1,51 @@
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lubridate)
+install.packages("linelist")
+library(linelist)
+
+
+# Load Data ---------------------------------------------------------------
+
+
+md_1033 <- read_csv("md_1033.csv")
+
+
+# Clean Data --------------------------------------------------------------
+
+# Let's begin by fixing the column names 
+
+md_1033 <- md_1033 %>%
+  rename_all(
+    funs(
+      str_to_lower(.) %>%
+      str_replace_all(., ' ', '_'))) 
+
+# Let's make acquisition value numeric 
+
+md_1033$acquisition_value <- md_1033$acquisition_value %>% 
+  str_replace(., "\\$", "") %>%
+  str_replace(., "\\,", "") %>%
+  as.numeric() 
+  
+
+
+# Next, convert ship date to date time
+
+md_1033$ship_date <- md_1033$ship_date %>%
+  str_replace(.,"AM", "") %>%
+  mdy_hms()
+
+
+# Convert to csv
+
+write_csv(md_1033, "1033_clean_2_24.csv")
+
+
+
+
+
+
+
