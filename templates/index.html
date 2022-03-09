@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head></head>
+    <body>
+        <h1>Weapons and Equipment Acquired by Maryland Police Through the Federal 1033 Program</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Agency Name</th>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Value</th>
+                <th>Ship Date</th>
+            </tr>
+            {% for obj in object_list %}
+            <tr>
+                <td>{{ obj.agency_name }}</td>
+                <td>{{ obj.item_name }}</td>
+                <td>{{ obj.quantity }}</td>
+                <td>{{ obj.acquisition_value }}</td>
+                <td>{{ obj.ship_date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
