@@ -6,18 +6,20 @@
         <table border=1 cellpadding=7>
             <tr>
                 <th>Agency Name</th>
-                <th>Item Name</th>
-                <th>Quantity</th>
-                <th>Value</th>
-                <th>Ship Date</th>
+                <th>Total Items</th>
+                <th>Total Acquisition Value</th>
+                <th>Most Acquired Item</th>
+                <th>First Acquisition</th>
+                <th>Last Acquisition</th>
             </tr>
             {% for obj in object_list %}
             <tr>
-                <td>{{ obj.agency_name }}</td>
-                <td>{{ obj.item_name }}</td>
-                <td>{{ obj.quantity }}</td>
-                <td>{{ obj.acquisition_value }}</td>
-                <td>{{ obj.ship_date }}</td>
+                <td><a href="{{ obj.slug }}/">{{ obj.agency_name }}</a></td>
+                <td>{{ obj.total_items }}</td>
+                <td>{{ obj.total_acquisition_value }}</td>
+                <td>{{ obj.most_acquired_item }}</td>
+                <td>{{ obj.first_acquisition }}</td>
+                <td>{{ obj.last_acquisition }}</td>
             </tr>
             {% endfor %}
         </table>

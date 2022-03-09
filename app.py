@@ -5,14 +5,14 @@ from flask import render_template
 app = Flask(__name__)
 
 def get_csv_big():
-    csv_path = './static/1033_clean_2_24.csv'
+    csv_path = './static/1033_clean_3_09.csv'
     csv_file = open(csv_path, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
     return csv_list
 
 def get_csv_summary():
-    csv_path = './static/1033_clean_2_24.csv'
+    csv_path = './static/summary_table_1033_3_09.csv'
     csv_file = open(csv_path, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
@@ -23,16 +23,16 @@ def get_csv_summary():
 @app.route("/")
 def index():
     template = 'index.html'
-    object_list = get_csv_big()
+    object_list = get_csv_summary()
     return render_template(template, object_list=object_list)
 
-@app.route('/<row_id>/')
-def detail(row_id):
+@app.route('/<slug>/')
+def detail(slug):
     template = 'detail.html'
     object_list = get_csv_big()
     for row in object_list:
-        if row['id'] == row_id:
-            return render_template(template, object=row)
+        if row['slug'] == slug:
+            return render_template(template, object=object_list)
     abort(404)
 
 
