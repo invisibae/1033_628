@@ -2,7 +2,6 @@
 <html lang="en">
     <head></head>
     <body>
-        <h1>{{object.agency_name}}</h1>
         <table border=1 cellpadding=7>
             <tr>
                 <th>Name</th>
@@ -10,14 +9,16 @@
                 <th>Quantity</th>
                 <th>Value</th>
                 <th>Ship Date</th>
+                <th>Slug</th>
             </tr>
-            {% for obj in object_list %}
+            {% for obj in object_list_2 %}
             <tr>
-                <td>{{ object.agency_name }}</td>
-                <td>{{ object.item_name }}</td>
-                <td>{{ object.quantity }}</td>
-                <td>{{ object.acquisition_value }}</td>
-                <td>{{ object.ship_date }}</td>
+                <td>{{ obj.agency_name }}</td>
+                <td>{{ obj.item_name }}</td>
+                <td>{{ obj.quantity }}</td>
+                <td>{{ obj.acquisition_value }}</td>
+                <td>{{ obj.ship_date }}</td>
+                <td> {{obj.slug }}</td>
             </tr>
             {% endfor %}
         </table>

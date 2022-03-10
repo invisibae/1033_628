@@ -5,7 +5,7 @@ from flask import render_template
 app = Flask(__name__)
 
 def get_csv_big():
-    csv_path = './static/1033_clean_3_09.csv'
+    csv_path = './static/1033_clean_3_09_2.csv'
     csv_file = open(csv_path, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
@@ -29,10 +29,10 @@ def index():
 @app.route('/<slug>/')
 def detail(slug):
     template = 'detail.html'
-    object_list = get_csv_big()
-    for row in object_list:
+    object_list_2 = get_csv_big()
+    for row in object_list_2:
         if row['slug'] == slug:
-            return render_template(template, object=object_list)
+            return render_template(template, object_list_2=object_list_2)
     abort(404)
 
 
