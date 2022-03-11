@@ -1,0 +1,4 @@
+"state","agency_name","nsn","item_name","quantity","ui","acquisition_value","demil_code","demil_ic","ship_date","station_type"
+"MD","LA PLATA POLICE DEPT","2320-01-455-9593","TRUCK,UTILITY",1,"Each",60409,"C",1,2014-06-23 12:00:00,"State"
+"MD","LA PLATA POLICE DEPT","1005-01-559-7993","SIGHT,HOLOGRAPHIC",10,"Each",485.43,"D",1,2014-10-21 12:00:00,"State"
+"MD","LA PLATA POLICE DEPT","2320-01-107-7155","TRUCK,UTILITY",1,"Each",41061,"Q",6,2014-12-15 12:00:00,"State"

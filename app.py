@@ -1,5 +1,6 @@
 import csv
 from flask import Flask
+from flask import request
 from flask import abort
 from flask import render_template
 app = Flask(__name__)
@@ -12,7 +13,7 @@ def get_csv_big():
     return csv_list
 
 def get_csv_summary():
-    csv_path = './static/summary_table_1033_3_09.csv'
+    csv_path = './static/summary_table_1033_3_011.csv'
     csv_file = open(csv_path, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
@@ -30,9 +31,9 @@ def index():
 def detail(slug):
     template = 'detail.html'
     object_list_2 = get_csv_big()
-    for row in object_list_2:
-        if row['slug'] == slug:
-            return render_template(template, object_list_2=object_list_2)
+    print(slug)
+    newlist = [row for row in object_list_2 if slug==row['slug']]
+    return render_template(template, newlist=newlist)
     abort(404)
 
 
