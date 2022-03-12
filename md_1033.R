@@ -6,6 +6,7 @@ library(lubridate)
 library(linelist)
 library(kml_to_csv)
 library(janitor)
+library(foreach)
 
 
 # Load Data ---------------------------------------------------------------
@@ -54,25 +55,45 @@ calculate_mode <- function(x) {
   uniqx[which.max(tabulate(match(x, uniqx)))]
 }
 
+md_1033_locations <- read_csv("static/1033_locations.csv")
 
 
-write_csv(md_1033, "1033_clean_3_09.csv")
+write_csv(md_1033, "1033_clean_3_09_2.csv")
 
-summary_table <- md_1033 %>%
-  group_by(agency_name) %>%
+summary_table <- md_1033_locations %>%
+  group_by(agency_name, Latitude, Longitude) %>%
   summarize(total_items = sum(quantity),
             total_acquisition_value = sum(quantity * acquisition_value),
             most_acquired_item = calculate_mode(item_name),
             first_acquisition = min(ship_date),
-            last_acquisition = max(ship_date)
-            ) %>%
-  mutate(agency_name_2 = paste0(agency_name, ", Maryland"))
+            last_acquisition = max(ship_date),
+            )
 
 summary_table$slug <- summary_table$agency_name %>%
   tolower() %>%
   str_replace_all(., ' ', '_')
 
+summary_table$Title <-summary_table$agency_name %>%
+  paste(summary_table$total_acquisition_value, sep = "--Total Acquisition Value:")
 
+?paste
+
+
+
+split_1033 <- md_1033 %>%
+  select(-slug) %>%
+  split(md_1033$agency_name)
+
+
+department_weapons_1033 <- lapply(split_1033, function(x) filter(x, str_detect(nsn, "1005|2355|2320")))
+
+
+list2env(department_weapons_1033, envir=.GlobalEnv)
+
+
+lapply(1:length(department_weapons_1033), function(i) write.csv(department_weapons_1033[[i]], 
+                                                file = paste0(names(department_weapons_1033[i]), ".csv"),
+                                                row.names = FALSE))
 
 
 
@@ -85,7 +106,7 @@ summary_table %>%
 
   arrange(desc(total_acquisition_value))
 
-write_csv(summary_table, "summary_table_1033_3_09.csv")
+write_csv(summary_table, "summary_table_1033_3_11.csv")
 
 
 

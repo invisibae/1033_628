@@ -1,8 +1,9 @@
 body {
     margin: 0 auto;
     padding: 0;
+    padding-bottom: 50px;
     font-family: Verdana, sans-serif;
-    background-color: ##F2EFEC;
+    background-color: #F2EFEC;
     max-width: 1200px;
 }
 nav {
@@ -62,6 +63,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
 @media (max-width: 979px) {
     tr th:nth-of-type(n+3),
     tr td:nth-of-type(n+3) {
