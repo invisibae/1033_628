@@ -13,7 +13,9 @@
     </head>
     <body>
 <!-- need to get agency name up here -->
-<h1>Department name</h1>
+{% for obj in newlist %}
+<h1>{{ obj.agency_name|title }}</h1>
+{% endfor %}
 <!-- this button should work when we freeze, right? -->
 
 <a href='index.html'><button>Go back to see all</button></a>
@@ -21,7 +23,7 @@
 <br>
 
 <table id="example" class="display" style="width:100%">
-  <thead>
+          <thead>
             <tr>
                 <th>Name</th>
                 <th>Item</th>
@@ -29,18 +31,18 @@
                 <th>Value</th>
                 <th>Ship Date</th>
             </tr>
+            <tbody>
             {% for obj in newlist %}
             <tr>
-                <td>{{ obj.agency_name }}</td>
+                <td>{{ obj.agency_name|title }}</td>
                 <td>{{ obj.item_name }}</td>
                 <td>{{ obj.quantity }}</td>
-                <td>{{ obj.acquisition_value }}</td>
+                <td>{{ obj.acquisition_value|currencyFormat }}</td>
                 <td>{{ obj.ship_date }}</td>
-
             </tr>
             {% endfor %}
           </thead>
-                    </tbody>
+            </tbody>
                   </table>
                   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
                  <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script> -->

@@ -24,6 +24,9 @@ def currencyFormat(value):
     value = float(value)
     return "${:,.2f}".format(value)
 
+@app.template_filter()
+
+
 
 
 @app.route("/")

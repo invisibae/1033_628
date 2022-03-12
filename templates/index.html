@@ -33,7 +33,7 @@
             {% for obj in object_list %}
 
             <tr>
-                <td><a href="{{ obj.slug }}/">{{ obj.agency_name }}</a></td>
+                <td><a href="{{ obj.slug }}/">{{ obj.agency_name|title }}</a></td>
                 <td>{{ obj.total_items }}</td>
                 <td>{{ obj.total_acquisition_value|currencyFormat }}</td>
                 <td>{{ obj.most_acquired_item }}</td>
@@ -41,7 +41,7 @@
                 <td>{{ obj.last_acquisition }}</td>
             </tr>
             {% endfor %}
-</thead>
+          </thead>
           </tbody>
         </table>
         <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
