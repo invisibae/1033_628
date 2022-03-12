@@ -18,7 +18,7 @@
 {% endfor %}
 <!-- this button should work when we freeze, right? -->
 
-<a href='index.html'><button>Go back to see all</button></a>
+<a href='/'><button>Go back to see all</button></a>
 <br>
 <br>
 
@@ -43,19 +43,14 @@
             {% endfor %}
           </thead>
             </tbody>
-                  </table>
-                  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-                 <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script> -->
-                 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-                  <script>
-                  $(document).ready(function() {
-                    $(document).ready(function() {
-                $('#example').DataTable( {
-                    "paging":   false,
-                    "searching": false,
-                    "info":     false
-                } );
-            } );
-                       </script>
-    </body>
-</html>
+            </table>
+            <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+           <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script> -->
+           <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+            <script>
+            $(document).ready(function() {
+    $('#example').DataTable();
+    } );
+                 </script>
+             </body>
+         </html>
