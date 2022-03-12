@@ -4,13 +4,22 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="../static/style.css" />
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTabl   es.bootstrap5.css"> -->
        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Weapons and Equipment Acquired by Maryland Police Through the Federal 1033 Program</h1>
-        <table border=1 cellpadding=7 id="data" class="table table-striped">
-          <thread>
+      <div class="index-topper">
+        <h1>Military weapons and equipment in Maryland police departments, acquired through the federal 1033 Program</h1>
+        <div class="byline">
+                By Greg Morton and Rina Torchinsky
+        <br><br>
+      </div>
+    </div>
+        <table id="example" class="display" style="width:100%">
+          <thead>
             <tr>
                 <th>Agency Name</th>
                 <th>Total Items</th>
@@ -19,10 +28,9 @@
                 <th>First Acquisition</th>
                 <th>Last Acquisition</th>
            </tr>
-          </thread>
 
-            <tbody>
             {% for obj in object_list %}
+
             <tr>
                 <td><a href="{{ obj.slug }}/">{{ obj.agency_name }}</a></td>
                 <td>{{ obj.total_items }}</td>
@@ -32,18 +40,16 @@
                 <td>{{ obj.last_acquisition }}</td>
             </tr>
             {% endfor %}
+</thead>
           </tbody>
         </table>
         <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
        <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script> -->
        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
         <script>
-                 $(document).ready(function () {
-                     $('#data').DataTable({
-                         pageLength : 15,
-                         lengthMenu: [[15, 30, 45, 60, -1], [15, 30, 45, 60, 'Show all']]
-                     });
-                 });
+        $(document).ready(function() {
+$('#example').DataTable();
+} );
              </script>
          </body>
      </html>

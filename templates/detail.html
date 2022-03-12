@@ -1,15 +1,33 @@
 <!doctype html>
 <html lang="en">
-    <head></head>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../static/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+      <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTabl   es.bootstrap5.css"> -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+
+    </head>
     <body>
-        <table border=1 cellpadding=7>
+<!-- need to get agency name up here -->
+<h1>Department name</h1>
+<!-- this button should work when we freeze, right? -->
+
+<a href='index.html'><button>Go back to see all</button></a>
+<br>
+<br>
+
+<table id="example" class="display" style="width:100%">
+  <thead>
             <tr>
                 <th>Name</th>
                 <th>Item</th>
                 <th>Quantity</th>
                 <th>Value</th>
                 <th>Ship Date</th>
-                <th>Slug</th>
             </tr>
             {% for obj in newlist %}
             <tr>
@@ -18,9 +36,24 @@
                 <td>{{ obj.quantity }}</td>
                 <td>{{ obj.acquisition_value }}</td>
                 <td>{{ obj.ship_date }}</td>
-                <td>{{ obj.slug }}</td>
+
             </tr>
             {% endfor %}
-        </table>
+          </thead>
+                    </tbody>
+                  </table>
+                  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                 <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script> -->
+                 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+                  <script>
+                  $(document).ready(function() {
+                    $(document).ready(function() {
+                $('#example').DataTable( {
+                    "paging":   false,
+                    "searching": false,
+                    "info":     false
+                } );
+            } );
+                       </script>
     </body>
 </html>
