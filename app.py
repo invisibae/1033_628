@@ -13,7 +13,7 @@ def get_csv_big():
     return csv_list
 
 def get_csv_summary():
-    csv_path = './static/summary_table_1033_3_011.csv'
+    csv_path = './static/summary_table_1033_3_11.csv'
     csv_file = open(csv_path, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
