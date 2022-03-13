@@ -1,44 +1,52 @@
-body {
+.hed {
+	background-color: #ededed;
+	padding-bottom: 2%;
+  text-align: center;
+  font-family: 'League Gothic', sans-serif;
+
+}
+
+.byline {
+  font-family: Arial, sans-serif;
+
+}
+
+table {
+  font-family: Arial, sans-serif;
+
+}
+
+p {
     margin: 0 auto;
     padding: 0;
-    padding-bottom: 50px;
     font-family: Arial, sans-serif;
     max-width: 1200px;
 }
 
-index-topper {
-  background-color: #FBD603;
 
-}
 nav {
     background-color:  #FFFFF;
     width: 100%;
     height: 50px;
 }
-nav img {
-    height: 34px;
-    padding: 8px;
-}
-header {
-    margin: 25px 10px 15px 10px;
-    font-family: Times, Times New Roman, serif;
-}
+
 h1 {
     margin: 0;
     padding: 0;
     font-family: 'League Gothic', sans-serif;
     font-size: 44px;
-    line-height: 50px;
-    text-shadow: 0.3px 0.3px 0px gray;
     letter-spacing: .01em;
 }
-.byline {
-    margin: 6px 0 0 0;
-    font-size: 13px;
-    font-weight: bold;
+
+h2 {
+    font-size: 28px;
+    letter-spacing: .01em;
+    font-family: 'League Gothic', sans-serif;
 }
-.byline a {
-    text-transform: uppercase;
+
+
+
+
 }
 table {
     border-collapse:collapse;
