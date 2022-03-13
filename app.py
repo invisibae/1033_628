@@ -6,14 +6,14 @@ from flask import render_template
 app = Flask(__name__)
 
 def get_csv_big():
-    csv_path = './static/1033_clean_3_09_2.csv'
+    csv_path = './static/1033_clean_3_13.csv'
     csv_file = open(csv_path, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
     return csv_list
 
 def get_csv_summary():
-    csv_path = './static/summary_table_1033_3_12.csv'
+    csv_path = './static/summary_table_3_13.csv'
     csv_file = open(csv_path, 'r')
     csv_obj = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
