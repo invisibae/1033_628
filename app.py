@@ -39,9 +39,11 @@ def index():
 def detail(slug):
     template = 'detail.html'
     object_list_2 = get_csv_big()
+    object_list_3 = get_csv_summary()
     print(slug)
     newlist = [row for row in object_list_2 if slug==row['slug']]
-    return render_template(template, newlist=newlist)
+    newlist_2 = [row for row in object_list_3 if slug==row['slug']]
+    return render_template(template, newlist=newlist, newlist_2=newlist_2)
     abort(404)
 
 
