@@ -15,7 +15,7 @@
     <body>
 <!-- need to get agency name up here -->
 {% for obj in newlist %}
-<h1>{{ obj.agency_name|title }}</h1>
+<h1>{{ obj.agency_name[1]|title }}</h1>
 {% endfor %}
 <!-- this button should work when we freeze, right? -->
 
