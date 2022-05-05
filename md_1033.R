@@ -7,6 +7,7 @@ library(linelist)
 library(kml_to_csv)
 library(janitor)
 library(foreach)
+library(scales)
 
 
 # Load Data ---------------------------------------------------------------
@@ -44,9 +45,15 @@ md_1033$ship_date <- md_1033$ship_date %>%
   str_replace(.,"AM", "") %>%
   mdy_hms()
 
+md_1033$ship_date_clean <- md_1033$ship_date %>%
+  as.Date("%Y/%m/%d")
+
+
 
 # Convert to csv
-write_csv(md_1033, "1033_clean_3_09.csv")
+write_csv(md_1033, "1033_clean_3_13.csv")
+
+
 
 # Make Function to Calculate Mode  ----------------------------------------
 
@@ -73,10 +80,13 @@ summary_table$slug <- summary_table$agency_name %>%
   tolower() %>%
   str_replace_all(., ' ', '_')
 
-summary_table$Title <-summary_table$agency_name %>%
-  paste(summary_table$total_acquisition_value, sep = "--Total Acquisition Value:")
+summary_table$test <- dollar(summary_table$total_acquisition_value, prefix = "$")
 
-?paste
+summary_table$data_wrapper <-summary_table$agency_name %>%
+  str_to_title() %>%
+  paste(summary_table$test, sep = "- Total Acquisition Value:")
+
+write_csv(summary_table, "summary_table_1033_3_12.csv")
 
 
 
@@ -106,7 +116,7 @@ summary_table %>%
 
   arrange(desc(total_acquisition_value))
 
-write_csv(summary_table, "summary_table_1033_3_11.csv")
+
 
 
 
@@ -115,3 +125,14 @@ md_1033 %>%
   filter(agency_name == "PRINCE GEORGE COUNTY POLICE DEPT") %>%
   group_by(item_name) %>%
   summarize(count = n())
+
+summary_table$first_acquisition_date <- summary_table$first_acquisition %>%
+  as.Date("%Y/%m/%d") 
+
+
+summary_table$last_acquisition_date <-summary_table$last_acquisition %>%
+  as.Date("%Y/%m/%d") 
+
+
+write_csv(summary_table, "summary_table_3_13.csv")
+

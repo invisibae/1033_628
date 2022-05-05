@@ -22,14 +22,13 @@
 </div>
 <!-- this button should work when we freeze, right? -->
 
-<a href='/'><button>Go back to see all</button></a>
+<a href='/1033/index.html'><button>Go back to see all</button></a>
 <br>
 <br>
 
 <table id="example" class="display" style="width:100%">
           <thead>
             <tr>
-                <th>Name</th>
                 <th>Item</th>
                 <th>Quantity</th>
                 <th>Value</th>
@@ -38,7 +37,6 @@
             <tbody>
             {% for obj in newlist %}
             <tr>
-                <td>{{ obj.agency_name|title }}</td>
                 <td>{{ obj.item_name }}</td>
                 <td>{{ obj.quantity }}</td>
                 <td>{{ obj.acquisition_value|currencyFormat }}</td>
