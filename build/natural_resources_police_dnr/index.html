@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../static/style.css" />
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+      <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTabl   es.bootstrap5.css"> -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+    <div class="hed">
+      <br>
+<!-- need to get agency name up here -->
+
+<h1>NATURAL RESOURCES POLICE DNR</h1>
+
+</div>
+<!-- this button should work when we freeze, right? -->
+
+<a href='/1033/index.html'><button>Go back to see all</button></a>
+<br>
+<br>
+
+<table id="example" class="display" style="width:100%">
+          <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Value</th>
+                <th>Ship Date</th>
+            </tr>
+            <tbody>
+            
+            <tr>
+                <td>WINDOW PANEL,AIRCRAFT</td>
+                <td>4</td>
+                <td>$699.37</td>
+                <td>2014-10-06</td>
+            </tr>
+            
+            <tr>
+                <td>LEG,ENGINE MOUNT</td>
+                <td>4</td>
+                <td>$3,098.29</td>
+                <td>2014-11-28</td>
+            </tr>
+            
+            <tr>
+                <td>SANITIZER, HAND (PERSONAL SIZE)</td>
+                <td>1</td>
+                <td>$6.24</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+            <tr>
+                <td>SANITIZER, HAND (PERSONAL SIZE)</td>
+                <td>659</td>
+                <td>$6.24</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+            <tr>
+                <td>SIGHT,REFLEX</td>
+                <td>6</td>
+                <td>$333.00</td>
+                <td>2018-05-03</td>
+            </tr>
+            
+            <tr>
+                <td>DOOR,CREW</td>
+                <td>1</td>
+                <td>$12,136.74</td>
+                <td>2014-10-14</td>
+            </tr>
+            
+            <tr>
+                <td>SIGHT,REFLEX</td>
+                <td>12</td>
+                <td>$469.00</td>
+                <td>2018-05-03</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT,AIR OUTLET</td>
+                <td>1</td>
+                <td>$164.72</td>
+                <td>2014-07-14</td>
+            </tr>
+            
+            <tr>
+                <td>HELMET,FLYER&#39;S</td>
+                <td>1</td>
+                <td>$886.57</td>
+                <td>2014-06-10</td>
+            </tr>
+            
+            <tr>
+                <td>DOOR,CREW</td>
+                <td>2</td>
+                <td>$12,136.74</td>
+                <td>2014-10-14</td>
+            </tr>
+            
+            <tr>
+                <td>CONTROL STICK,AIRCRAFT</td>
+                <td>1</td>
+                <td>$9,665.40</td>
+                <td>2014-10-08</td>
+            </tr>
+            
+            <tr>
+                <td>BOOT ASSY,DUCT</td>
+                <td>3</td>
+                <td>$104.04</td>
+                <td>2015-02-11</td>
+            </tr>
+            
+            <tr>
+                <td>BOOT ASSY,DUCT</td>
+                <td>1</td>
+                <td>$104.04</td>
+                <td>2015-02-11</td>
+            </tr>
+            
+            <tr>
+                <td>PLENUM,HEATER,AIRCR</td>
+                <td>1</td>
+                <td>$2,085.21</td>
+                <td>2015-03-06</td>
+            </tr>
+            
+            <tr>
+                <td>HELICOPTER,OBSERVATION</td>
+                <td>1</td>
+                <td>$92,290.00</td>
+                <td>2009-07-17</td>
+            </tr>
+            
+            <tr>
+                <td>TOOL KIT,AIRCRAFT MAINTENANCE</td>
+                <td>1</td>
+                <td>$641.00</td>
+                <td>2014-06-24</td>
+            </tr>
+            
+            <tr>
+                <td>SHAFT,OUTPUT DRIVE</td>
+                <td>2</td>
+                <td>$1,036.04</td>
+                <td>2014-06-28</td>
+            </tr>
+            
+            <tr>
+                <td>IMAGE INTENSIFIER</td>
+                <td>1</td>
+                <td>$129,477.00</td>
+                <td>2014-04-10</td>
+            </tr>
+            
+            <tr>
+                <td>HELMET,FLYER&#39;S</td>
+                <td>5</td>
+                <td>$886.57</td>
+                <td>2014-06-10</td>
+            </tr>
+            
+            <tr>
+                <td>COLLAR,SWASHPLATE D</td>
+                <td>4</td>
+                <td>$408.00</td>
+                <td>2014-07-09</td>
+            </tr>
+            
+            <tr>
+                <td>CARRIER ASSY,TRANSM</td>
+                <td>3</td>
+                <td>$3,146.00</td>
+                <td>2014-07-08</td>
+            </tr>
+            
+            <tr>
+                <td>SHOE ASSY,SKID</td>
+                <td>10</td>
+                <td>$396.46</td>
+                <td>2014-07-08</td>
+            </tr>
+            
+            <tr>
+                <td>SUPPORT,STRUCTURAL COMPONENT,AIRCRAFT</td>
+                <td>3</td>
+                <td>$146.24</td>
+                <td>2014-11-19</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT ASSY,AIR</td>
+                <td>4</td>
+                <td>$114.48</td>
+                <td>2014-07-14</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT,AIR OUTLET</td>
+                <td>4</td>
+                <td>$117.75</td>
+                <td>2014-07-15</td>
+            </tr>
+            
+            <tr>
+                <td>PLATE ASSY,DROOP COMPENSATOR</td>
+                <td>3</td>
+                <td>$400.23</td>
+                <td>2014-07-24</td>
+            </tr>
+            
+            <tr>
+                <td>WINDOW PANEL,AIRCRAFT</td>
+                <td>1</td>
+                <td>$849.98</td>
+                <td>2014-10-09</td>
+            </tr>
+            
+            <tr>
+                <td>FILTER,LIGHT,PANEL</td>
+                <td>1</td>
+                <td>$12.36</td>
+                <td>2014-07-24</td>
+            </tr>
+            
+            <tr>
+                <td>CASE,COMBUSTION CHAMBER,AIRCRAFT GAS TURBINE ENGINE</td>
+                <td>1</td>
+                <td>$3,987.00</td>
+                <td>2014-07-29</td>
+            </tr>
+            
+            <tr>
+                <td>CONNECTING LINK,RIGID</td>
+                <td>3</td>
+                <td>$637.00</td>
+                <td>2014-10-04</td>
+            </tr>
+            
+            <tr>
+                <td>CASE ASSEMBLY</td>
+                <td>3</td>
+                <td>$12,265.86</td>
+                <td>2014-07-09</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT,AIR OUTLET</td>
+                <td>4</td>
+                <td>$125.81</td>
+                <td>2014-07-15</td>
+            </tr>
+            
+            <tr>
+                <td>RETAINER,WINDSHIELD</td>
+                <td>1</td>
+                <td>$205.22</td>
+                <td>2014-07-09</td>
+            </tr>
+            
+            <tr>
+                <td>FORCE GRADIENT ASSY</td>
+                <td>3</td>
+                <td>$464.00</td>
+                <td>2014-07-10</td>
+            </tr>
+            
+            <tr>
+                <td>SUPPORT ASSY,BELL C</td>
+                <td>5</td>
+                <td>$2,071.00</td>
+                <td>2014-07-09</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT,AIR OUTLET</td>
+                <td>4</td>
+                <td>$118.49</td>
+                <td>2014-07-14</td>
+            </tr>
+            
+            <tr>
+                <td>VALVE,CHECK</td>
+                <td>5</td>
+                <td>$2,024.00</td>
+                <td>2014-07-15</td>
+            </tr>
+            
+            <tr>
+                <td>DRIVE SHAFT-SEG</td>
+                <td>10</td>
+                <td>$638.00</td>
+                <td>2014-07-08</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT ASSY,AIR</td>
+                <td>4</td>
+                <td>$150.74</td>
+                <td>2014-07-14</td>
+            </tr>
+            
+            <tr>
+                <td>LEG,ENGINE MOUNT,FO</td>
+                <td>8</td>
+                <td>$464.46</td>
+                <td>2014-10-17</td>
+            </tr>
+            
+            <tr>
+                <td>CASE,COMBUSTION CHAMBER,AIRCRAFT GAS TURBINE ENGINE</td>
+                <td>1</td>
+                <td>$3,987.00</td>
+                <td>2014-07-29</td>
+            </tr>
+            
+            <tr>
+                <td>PANEL,FAULT-FUNCTION INDICATOR,AIRCRAFT</td>
+                <td>2</td>
+                <td>$8,774.11</td>
+                <td>2014-10-06</td>
+            </tr>
+            
+            <tr>
+                <td>CLEVIS,IDLER CONTRO</td>
+                <td>2</td>
+                <td>$1,338.74</td>
+                <td>2014-07-10</td>
+            </tr>
+            
+            <tr>
+                <td>DOOR ASSEMBLY,AIRCRAFT SEAT</td>
+                <td>1</td>
+                <td>$3,622.29</td>
+                <td>2014-07-15</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT</td>
+                <td>4</td>
+                <td>$105.70</td>
+                <td>2014-07-14</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT,AIR OUTLET</td>
+                <td>1</td>
+                <td>$103.30</td>
+                <td>2014-07-12</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT,AIR OUTLET</td>
+                <td>1</td>
+                <td>$103.30</td>
+                <td>2014-07-12</td>
+            </tr>
+            
+            <tr>
+                <td>SUPPORT,STRUCTURAL COMPONENT,AIRCRAFT</td>
+                <td>2</td>
+                <td>$1,162.27</td>
+                <td>2015-01-30</td>
+            </tr>
+            
+            <tr>
+                <td>MIXING VALVE,REMOTE</td>
+                <td>2</td>
+                <td>$13,587.24</td>
+                <td>2015-02-10</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT ASSEMBLY,BLEED AIR</td>
+                <td>5</td>
+                <td>$457.74</td>
+                <td>2015-02-13</td>
+            </tr>
+            
+            <tr>
+                <td>VALVE TEMPERATURE C</td>
+                <td>3</td>
+                <td>$10,515.00</td>
+                <td>2015-02-12</td>
+            </tr>
+            
+            <tr>
+                <td>COLLAR,SWASHPLATE D</td>
+                <td>5</td>
+                <td>$408.00</td>
+                <td>2014-07-08</td>
+            </tr>
+            
+            <tr>
+                <td>WINDOW PANEL,AIRCRAFT</td>
+                <td>1</td>
+                <td>$849.98</td>
+                <td>2014-10-09</td>
+            </tr>
+            
+            <tr>
+                <td>VALVE,FLAPPER</td>
+                <td>1</td>
+                <td>$1,227.89</td>
+                <td>2014-07-09</td>
+            </tr>
+            
+            <tr>
+                <td>GUIDE,CONTROL STICK</td>
+                <td>2</td>
+                <td>$208.22</td>
+                <td>2014-07-10</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT,AIR OUTLET</td>
+                <td>1</td>
+                <td>$103.30</td>
+                <td>2014-07-12</td>
+            </tr>
+            
+            <tr>
+                <td>DUCT,AIR OUTLET</td>
+                <td>1</td>
+                <td>$103.30</td>
+                <td>2014-07-12</td>
+            </tr>
+            
+            <tr>
+                <td>SPRAY NOZZLE,FUEL</td>
+                <td>1</td>
+                <td>$515.00</td>
+                <td>2014-10-08</td>
+            </tr>
+            
+            <tr>
+                <td>TANK,LUBRICATING OIL,AIRCRAFT GAS TURBINE ENGINE</td>
+                <td>2</td>
+                <td>$7,248.91</td>
+                <td>2014-10-08</td>
+            </tr>
+            
+            <tr>
+                <td>SLEEVE,CYCLIC STICK</td>
+                <td>1</td>
+                <td>$110.24</td>
+                <td>2014-11-19</td>
+            </tr>
+            
+            <tr>
+                <td>WINDOW PANEL,AIRCRAFT</td>
+                <td>1</td>
+                <td>$849.98</td>
+                <td>2014-10-09</td>
+            </tr>
+            
+            <tr>
+                <td>SUPPORT,STRUCTURAL COMPONENT,AIRCRAFT</td>
+                <td>4</td>
+                <td>$260.67</td>
+                <td>2014-10-22</td>
+            </tr>
+            
+            <tr>
+                <td>INDICATOR,ATTITUDE</td>
+                <td>3</td>
+                <td>$1,668.35</td>
+                <td>2014-07-24</td>
+            </tr>
+            
+          </thead>
+            </tbody>
+            </table>
+            <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+           <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script> -->
+           <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+            <script>
+            $(document).ready(function() {
+    $('#example').DataTable();
+    } );
+                 </script>
+             </body>
+         </html>

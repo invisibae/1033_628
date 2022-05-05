@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="../static/style.css" />
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+       <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTabl   es.bootstrap5.css"> -->
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+
+
+            <div class="hed">
+              <br>
+        <h1>Military weapons in your local Maryland police department</h1>
+
+
+        <div class="byline">
+                By Greg Morton and Rina Torchinsky
+                  </div>
+
+
+    </div>
+    <div class ="story">
+      <div class="col-md-6 offset-md-3">
+<p>Since 1994, law enforcement agencies in Maryland have acquired more than 8,000 items from the U.S Department of Defense.  Among these acquisitions are thousands of rifles and handguns, swaths of expensive tactical gear, a handful of armored anti-mine vehicles, and even three observation helicopters.</p>
+
+<p>Though the total value of these acquisitions, according to the DoD, is over $7 million, Maryland law enforcement agencies, along with law enforcement agencies across the country, have been able to get their hands on these instruments of war at virtually no cost.</p>
+
+<p>The free flow of surplus equipment from the defense department to cities and towns across America is facilitated mostly through the federal 1033 Program.  1033, also known as the Law Enforcement Support Office program, connects police departments with the DoD through the Defense Logistics Agency, the arm of the DoD responsible for acquiring and accounting for military gear.  Police departments are only responsible for paying the cost of shipping the items.
+Over its lifespan, the program has distributed over $5 billion in surplus military gear to police departments nationwide.</p>
+
+<p>Implemented under President Bill Clinton’s administration over the course of several national defense bills, 1033 has been heavily criticized for contributing to increased police militarization.</p>
+
+<p>(Quote TK)</p>
+
+<p>The federal government began to consider the possibility of transferring mass amounts of military weapons and equipment to law enforcement in the early 1990’s against a backdrop of increasing crime and an escalating ‘war on drugs’.</p>
+
+<p>The National Defense Authorization Act of 1990, passed as the crime rate was near its zenith, allowed the transfer of equipment from military to law enforcement specifically in the context of persecuting the drug war.  The program, originally called 1208 because it was established in section 1208 of the bill, only authorized transfers "for use in counter-drug activities".</p>
+
+<p>Maryland law enforcement agencies, including the State Police and Prince George’s County Police, took advantage of the opportunity, collectively acquiring over four dozen rifles through 1208 before its expansion later in the 1990’s.</p>
+
+<p>Deemed a success by lawmakers and law enforcement agencies, the 1208 program was expanded by the Defense Authorization Act for Fiscal Year 1997 into what we know today as the 1033 program.  The update allowed for broader adoption of the program and removed the limitations on use of the acquired items.</p>
+
+<p>Even with easier access to military surplus equipment, Maryland law enforcement agencies were initially slow to adopt 1033.  In 1997 Maryland law enforcement agencies made a total of only 6 acquisitions through the program.  It didn’t take very long for the pace of acquisition to speed up considerably.  In 1999 Maryland law enforcement agencies obtained over 80 items through the program.  Since 2000, the Maryland law enforcement agencies have acquired an average of around 75 items per year through 1033, peaking at 295 acquisitions in 2013.  In about half of all years since the beginning of the program, some kind of gun has been the most popular item among all Maryland agencies.</p>
+
+<p>(Quote TK)</p>
+
+<p>1033 began to come under fire in the mid 2010’s as a national reckoning with the societal consequences of the war on drugs dampened enthusiasm for police militarization among both citizens and lawmakers.</p>
+
+<p>The publication of 1033 records in 2014 forced many to come to grips with the sheer volume of equipment that has been obtained through the program.</p>
+
+<p>(Quote TK)</p>
+
+<p>Among the most troubling aspects of the realizations provided by the publication of 1033 records is how much equipment has gone to educational institutions.  As of today, universitie police departments in Maryland are still in possession of more than a dozen rifles, shotguns, and handguns acquired through the program.</p>
+
+<p>After coming under scrutiny, University of Maryland, College Park, divested from the program in 2020, returning all the items the university’s police department had acquired through the program up until that point.</p>
+
+<p>(Quote TK)</p>
+
+<p>The reexamination of policing in America has slowed the pace of 1033 acquisitions in Maryland substantially since 2014.  In subsequent years, police have acquired far fewer items and gun acquisition in particular has decreased substantially.</p>
+
+<p>Maryland hasn’t dispensed with the program entirely however.  The most notable 1033 acquisitions since the 2020 COVID-19 Pandemic has been thousands of bottles of hand sanitizer meant to help departments combat the virus, which has been especially deadly for police officers.</p>
+
+
+</div>
+</div>
+<br>
+
+        <table id="example" class="display" style="width:100%">
+          <thead>
+            <tr>
+                <th>Agency Name</th>
+                <th>Total Items</th>
+                <th>Total Acquisition Value</th>
+                <th>Most Acquired Item</th>
+                <th>First Acquisition</th>
+                <th>Last Acquisition</th>
+           </tr>
+
+            <tbody>
+            
+
+            <tr>
+                <td><a href="allegany_county_sheriff_dept/">Allegany County Sheriff Dept</a></td>
+                <td>6</td>
+                <td>$6,535.00</td>
+                <td>FIRING DEVICE,NON-LETHAL</td>
+                <td>2014-11-05</td>
+                <td>2015-04-29</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="annapolis_police_dept/">Annapolis Police Dept</a></td>
+                <td>13</td>
+                <td>$4,906.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1998-09-28</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="anne_arundel_comm_college_pd_hi_ed/">Anne Arundel Comm College Pd Hi_ed</a></td>
+                <td>9</td>
+                <td>$2,880.00</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>2013-09-19</td>
+                <td>2013-09-19</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="anne_arundel_county_police_dept/">Anne Arundel County Police Dept</a></td>
+                <td>694</td>
+                <td>$198,964.40</td>
+                <td>SIGHT,REFLEX</td>
+                <td>2003-06-25</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="baltimore_city_sheriff_office/">Baltimore City Sheriff Office</a></td>
+                <td>74</td>
+                <td>$21,212.00</td>
+                <td>SHOTGUN,12 GAGE,RIOT TYPE</td>
+                <td>1998-09-28</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="berlin_police_dept/">Berlin Police Dept</a></td>
+                <td>679</td>
+                <td>$112,570.75</td>
+                <td>SHOTGUN,12 GAGE,RIOT TYPE</td>
+                <td>1999-01-28</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="berwyn_heights_police_dept/">Berwyn Heights Police Dept</a></td>
+                <td>25</td>
+                <td>$7,760.00</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>1999-01-28</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="bladensburg_police_department/">Bladensburg Police Department</a></td>
+                <td>29</td>
+                <td>$236,344.76</td>
+                <td>SIGHT,NIGHT VISION SNIPERSCOPE</td>
+                <td>2012-11-14</td>
+                <td>2018-06-14</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="bowie_police_dept/">Bowie Police Dept</a></td>
+                <td>38</td>
+                <td>$82,226.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1998-09-28</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="cambridge_police_dept/">Cambridge Police Dept</a></td>
+                <td>93</td>
+                <td>$16,305.00</td>
+                <td>SIGHT,REFLEX</td>
+                <td>2003-04-15</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="capitol_heights_police_dept/">Capitol Heights Police Dept</a></td>
+                <td>1</td>
+                <td>$49,897.00</td>
+                <td>TRUCK,UTILITY</td>
+                <td>2014-04-09</td>
+                <td>2014-04-09</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="caroline_county_sheriff_dept/">Caroline County Sheriff Dept</a></td>
+                <td>6</td>
+                <td>$2,994.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2002-10-21</td>
+                <td>2002-10-21</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="carroll_county_sheriff_dept/">Carroll County Sheriff Dept</a></td>
+                <td>751</td>
+                <td>$43,290.40</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2001-05-29</td>
+                <td>2021-02-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="cecil_county_sheriff&#39;s_office/">Cecil County Sheriff&#39;s Office</a></td>
+                <td>52</td>
+                <td>$22,628.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2003-10-14</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="centreville_police_dept/">Centreville Police Dept</a></td>
+                <td>24</td>
+                <td>$60,908.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2003-10-14</td>
+                <td>2014-12-03</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="charles_county_sheriffs__office/">Charles County Sheriffs  Office</a></td>
+                <td>211</td>
+                <td>$223,107.72</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1998-09-28</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="chestertown_police_dept/">Chestertown Police Dept</a></td>
+                <td>15</td>
+                <td>$7,124.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2003-10-14</td>
+                <td>2004-09-07</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="colmar_manor_police_department/">Colmar Manor Police Department</a></td>
+                <td>16</td>
+                <td>$5,231.10</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>1999-01-28</td>
+                <td>2014-04-10</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="coppin_state_college_police_hi_ed/">Coppin State College Police Hi_ed</a></td>
+                <td>70</td>
+                <td>$41,128.96</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>2013-09-19</td>
+                <td>2021-11-10</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="cumberland_police_dept/">Cumberland Police Dept</a></td>
+                <td>3</td>
+                <td>$865,276.00</td>
+                <td>RIFLE,7.62 MILLIMETER</td>
+                <td>2004-03-15</td>
+                <td>2016-10-12</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="denton_police_dept/">Denton Police Dept</a></td>
+                <td>92</td>
+                <td>$109,695.23</td>
+                <td>PISTOL,CALIBER .45,AUTOMATIC</td>
+                <td>1997-04-21</td>
+                <td>2015-03-27</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="dorchester_county_sheriff&#39;s_office/">Dorchester County Sheriff&#39;s Office</a></td>
+                <td>22</td>
+                <td>$619,393.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1997-04-21</td>
+                <td>2019-04-25</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="easton_police_dept/">Easton Police Dept</a></td>
+                <td>660</td>
+                <td>$4,118.40</td>
+                <td>SANITIZER, HAND (PERSONAL SIZE)</td>
+                <td>2021-02-17</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="fruitland_police_dept/">Fruitland Police Dept</a></td>
+                <td>46</td>
+                <td>$144,436.00</td>
+                <td>SIGHT,REFLEX</td>
+                <td>1998-10-09</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="greenbelt_police_dept/">Greenbelt Police Dept</a></td>
+                <td>1</td>
+                <td>$460,000.00</td>
+                <td>ONLY COMPLETE COMBAT/ASSAULT/TACTICAL WHEELED VEHICLES</td>
+                <td>2000-03-28</td>
+                <td>2000-03-28</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="greensboro_police_dept/">Greensboro Police Dept</a></td>
+                <td>10</td>
+                <td>$52,887.00</td>
+                <td>SHOTGUN,12 GAGE,RIOT TYPE</td>
+                <td>1997-04-21</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="hampstead_police_department/">Hampstead Police Department</a></td>
+                <td>5</td>
+                <td>$1,358.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2006-08-28</td>
+                <td>2011-10-07</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="harford_county_sheriffs_office/">Harford County Sheriffs Office</a></td>
+                <td>917</td>
+                <td>$88,476.88</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2002-10-21</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="howard_county_sheriff_dept/">Howard County Sheriff Dept</a></td>
+                <td>2</td>
+                <td>$276.00</td>
+                <td>RIFLE,7.62 MILLIMETER</td>
+                <td>1998-09-16</td>
+                <td>1998-09-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="hyattsville_police_dept/">Hyattsville Police Dept</a></td>
+                <td>18</td>
+                <td>$69,034.00</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>2013-09-19</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="la_plata_police_dept/">La Plata Police Dept</a></td>
+                <td>24</td>
+                <td>$127,065.50</td>
+                <td>TRUCK,UTILITY</td>
+                <td>2014-06-23</td>
+                <td>2016-11-22</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="laurel_police_dept/">Laurel Police Dept</a></td>
+                <td>1</td>
+                <td>$63,894.00</td>
+                <td>TRUCK,UTILITY</td>
+                <td>2012-05-11</td>
+                <td>2012-05-11</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="maryland_capitol_police/">Maryland Capitol Police</a></td>
+                <td>60</td>
+                <td>$24,960.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2012-04-24</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="montgomery_county_police_dept/">Montgomery County Police Dept</a></td>
+                <td>1</td>
+                <td>$733,000.00</td>
+                <td>MINE RESISTANT VEHICLE</td>
+                <td>2014-04-21</td>
+                <td>2014-04-21</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="morgan_state_univ_police_hi_ed/">Morgan State Univ Police Hi_ed</a></td>
+                <td>14</td>
+                <td>$4,706.00</td>
+                <td>SHOTGUN,12 GAGE,RIOT TYPE</td>
+                <td>1999-01-28</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="natural_resources_police_dnr/">Natural Resources Police Dnr</a></td>
+                <td>838</td>
+                <td>$518,943.95</td>
+                <td>DUCT,AIR OUTLET</td>
+                <td>2009-07-17</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="new_carrollton_police_dept/">New Carrollton Police Dept</a></td>
+                <td>35</td>
+                <td>$14,151.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1999-01-28</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="ocean_city_police/">Ocean City Police</a></td>
+                <td>24</td>
+                <td>$76,450.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2002-10-21</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="oxford_police_department/">Oxford Police Department</a></td>
+                <td>11</td>
+                <td>$3,096.00</td>
+                <td>SHOTGUN,12 GAGE,RIOT TYPE</td>
+                <td>1998-10-09</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="pocomoke_city_police_dept/">Pocomoke City Police Dept</a></td>
+                <td>31</td>
+                <td>$80,893.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1999-01-28</td>
+                <td>2014-09-29</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="prince_george_county_police_dept/">Prince George County Police Dept</a></td>
+                <td>37</td>
+                <td>$10,566.00</td>
+                <td>RIFLE,7.62 MILLIMETER</td>
+                <td>1994-11-07</td>
+                <td>2014-03-24</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="prince_george&#39;s_cty_sheriff_office/">Prince George&#39;s Cty Sheriff Office</a></td>
+                <td>679</td>
+                <td>$21,432.64</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1995-03-15</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="princess_anne_police_dept/">Princess Anne Police Dept</a></td>
+                <td>33</td>
+                <td>$163,558.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2006-12-22</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="queen_annes_county_sheriffs_office/">Queen Annes County Sheriffs Office</a></td>
+                <td>134</td>
+                <td>$534,388.24</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1997-04-21</td>
+                <td>2016-12-19</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="ridgely_police_dept/">Ridgely Police Dept</a></td>
+                <td>9</td>
+                <td>$3,238.00</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>2004-12-23</td>
+                <td>2013-09-19</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="rising_sun_police_department/">Rising Sun Police Department</a></td>
+                <td>5</td>
+                <td>$64,623.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1996-06-26</td>
+                <td>2014-06-11</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="saint_marys_county_sheriff_dept/">Saint Marys County Sheriff Dept</a></td>
+                <td>27</td>
+                <td>$11,307.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2004-02-12</td>
+                <td>2004-04-22</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="saint_michaels_police_dept/">Saint Michaels Police Dept</a></td>
+                <td>18</td>
+                <td>$8,692.00</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>2005-02-18</td>
+                <td>2014-09-25</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="salisbury_police_dept/">Salisbury Police Dept</a></td>
+                <td>11</td>
+                <td>$66,150.00</td>
+                <td>SHOTGUN,12 GAGE,RIOT TYPE</td>
+                <td>1999-01-28</td>
+                <td>2013-03-12</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="snow_hill_police_dept/">Snow Hill Police Dept</a></td>
+                <td>19</td>
+                <td>$5,125.55</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>1994-11-28</td>
+                <td>2013-09-19</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="somerset_cso/">Somerset Cso</a></td>
+                <td>89</td>
+                <td>$58,079.68</td>
+                <td>PISTOL, 40CAL, GLOCK GEN 3</td>
+                <td>1994-11-28</td>
+                <td>2015-12-22</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="state_police/">State Police</a></td>
+                <td>1490</td>
+                <td>$539,327.80</td>
+                <td>SIGHT,REFLEX</td>
+                <td>1994-10-31</td>
+                <td>2021-02-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="takoma_park_police_dept/">Takoma Park Police Dept</a></td>
+                <td>29</td>
+                <td>$9,267.00</td>
+                <td>RIFLE,7.62 MILLIMETER</td>
+                <td>2003-06-25</td>
+                <td>2010-09-17</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="transit_admin_police_dept/">Transit Admin Police Dept</a></td>
+                <td>24</td>
+                <td>$9,642.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1999-01-28</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="univ_of_md_eastern_shore_pd_hi_ed/">Univ Of Md Eastern Shore Pd Hi_ed</a></td>
+                <td>8</td>
+                <td>$3,992.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1996-06-26</td>
+                <td>2005-02-14</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="washington_county_sheriffs_office/">Washington County Sheriffs Office</a></td>
+                <td>68</td>
+                <td>$26,808.00</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>2000-09-07</td>
+                <td>2015-03-30</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="wicomico_county_sheriff_office/">Wicomico County Sheriff Office</a></td>
+                <td>54</td>
+                <td>$983,740.50</td>
+                <td>RIFLE,5.56 MILLIMETER</td>
+                <td>1994-10-31</td>
+                <td>2018-12-04</td>
+            </tr>
+            
+
+            <tr>
+                <td><a href="worcester_county_sheriff_dept/">Worcester County Sheriff Dept</a></td>
+                <td>13</td>
+                <td>$1,794.00</td>
+                <td>RIFLE,7.62 MILLIMETER</td>
+                <td>1994-11-28</td>
+                <td>2008-01-22</td>
+            </tr>
+            
+          </thead>
+          </tbody>
+        </table>
+        <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+       <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script> -->
+       <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+        <script>
+        $(document).ready(function() {
+$('#example').DataTable();
+} );
+             </script>
+           </div>
+           </div>
+         </body>
+     </html>
